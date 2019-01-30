@@ -1,4 +1,4 @@
-class Book:
+class Book(object):
     def __init__(self):
         self.id_book = None
         self.title = None
