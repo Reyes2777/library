@@ -34,12 +34,12 @@ class Book(object):
             f'Fecha de Publicación: {self.publication_date}',
             f'Descripcion:{self.description}'
               )
-    def __delete__(self, instance):
-        print("Libro eliminado")
-        del self.id_book
-        del self.title
-        del self.sub_title
-        del self.author
-        del self.category
-        del self.publication_date
-        del self.description
+
+    def update_book(self, dictionary):
+        self.title = dictionary['title']
+        self.sub_title = dictionary['subtitle']
+        self.author = dictionary['author']
+        self.category = dictionary['category']
+        self.publication_date = dictionary['publication_date']
+        self.editor = dictionary['editor']
+        self.description = dictionary['description']
